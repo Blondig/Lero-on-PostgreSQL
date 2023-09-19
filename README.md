@@ -9,12 +9,17 @@ And this repository is a naive demo of Lero based on PostgreSQL. In the future, 
 This demo is based on a modified version of PostgreSQL 13.1, these are some related installation processes.
 
 ```bash
-# 1. download the PostgreSQL 13.1  
+# 1. download the PostgreSQL 13.1
 wget https://ftp.postgresql.org/pub/source/v13.1/postgresql-13.1.tar.bz2
 tar -xvf postgresql-13.1.tar.bz2
 
-# 2. apply some modifications on it
+# 2. git init PostgreSQL
 cd postgresql-13.1
+git init
+git add .
+git commit -m "init"
+
+# 3. apply some modifications on it
 git apply ../0001-init-lero.patch
 
 # 3. install PostgreSQL
